@@ -5,9 +5,7 @@
 
 -- Make line numbers default
 vim.opt.number = true
--- You can also add relative line numbers, to help with jumping.
---  Experiment for yourself to see if you like it!
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -18,10 +16,13 @@ vim.opt.showmode = false
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = 'unnamed'
 
 -- Enable break indent
 vim.opt.breakindent = true
+vim.opt.tabstop = 4
+
+vim.opt.wrap = true
 
 -- Save undo history
 vim.opt.undofile = true
@@ -58,5 +59,24 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+
+-- Neovide section
+if vim.g.neovide then
+  vim.g.neovide_fullscreen = false
+
+  vim.g.neovide_floating_blur_amount_x = 6.0
+  vim.g.neovide_floating_blur_amount_y = 6.0
+  vim.g.neovide_floating_shadow = true
+  vim.g.neovide_floating_z_height = 10
+  vim.g.neovide_light_angle_degrees = 45
+  vim.g.neovide_light_radius = 5
+
+  vim.g.neovide_cursor_vfx_mode = 'pixiedust'
+  vim.g.neovide_cursor_vfx_particle_density = 20.0
+  vim.g.neovide_cursor_vfx_particle_lifetime = 1.5
+  vim.g.neovide_cursor_vfx_particle_speed = 75.0
+
+  vim.o.guifont = 'Fira Code Retina:h11'
+end
 
 -- vim: ts=2 sts=2 sw=2 et
