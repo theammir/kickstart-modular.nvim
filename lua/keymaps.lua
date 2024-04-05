@@ -9,6 +9,7 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagn
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 vim.keymap.set('n', '<C-s>', '<cmd>:w<cr>', { desc = 'Quick-save' })
+vim.keymap.set('n', '<leader>q', '<cmd>:confirm qa<cr>', { desc = 'Quit' })
 
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
@@ -19,10 +20,10 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
-vim.keymap.set('n', '<C-Up>', '<cmd>resize +2<cr>', { desc = 'Resize horizontal window up' })
-vim.keymap.set('n', '<C-Down>', '<cmd>resize -2<cr>', { desc = 'Resize horizontal window down' })
-vim.keymap.set('n', '<C-Left>', '<cmd>vertical resize +2<cr>', { desc = 'Resize vertical window left' })
-vim.keymap.set('n', '<C-Right>', '<cmd>resize -2<cr>', { desc = 'Resize vertical window right' })
+-- vim.keymap.set('n', '<C-Up>', '<cmd>resize +2<cr>', { desc = 'Resize horizontal window up' })
+-- vim.keymap.set('n', '<C-Down>', '<cmd>resize -2<cr>', { desc = 'Resize horizontal window down' })
+-- vim.keymap.set('n', '<C-Left>', '<cmd>vertical resize +2<cr>', { desc = 'Resize vertical window left' })
+-- vim.keymap.set('n', '<C-Right>', '<cmd>resize -2<cr>', { desc = 'Resize vertical window right' })
 
 vim.keymap.set('n', '\\', '<C-w>s', { desc = 'Horizontal split' })
 vim.keymap.set('n', '|', '<C-w>v', { desc = 'Vertical split' })

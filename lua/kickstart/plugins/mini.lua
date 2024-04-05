@@ -34,6 +34,10 @@ return {
         },
       }
 
+      -- require('mini.base16').setup {
+      --   palette = require('mini.base16').mini_palette('#1a1b26', '#c0caf5', 10),
+      -- }
+
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
       --  and try some other statusline plugin

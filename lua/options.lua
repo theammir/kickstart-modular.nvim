@@ -3,6 +3,9 @@
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Make line numbers default
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -76,7 +79,9 @@ if vim.g.neovide then
   vim.g.neovide_cursor_vfx_particle_lifetime = 1.5
   vim.g.neovide_cursor_vfx_particle_speed = 75.0
 
-  vim.o.guifont = 'Fira Code Retina:h11'
+  vim.o.guifont = 'FiraCode Nerd Font:h11'
 end
+
+vim.g.have_nerd_font = true
 
 -- vim: ts=2 sts=2 sw=2 et
