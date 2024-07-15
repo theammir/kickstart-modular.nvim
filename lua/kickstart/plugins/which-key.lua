@@ -22,10 +22,10 @@ return {
       require('which-key').setup()
 
       -- Document existing key chains
-      require('which-key').register {
-        ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-        ['<leader>f'] = { name = '[F]ind', _ = 'which_key_ignore' },
-        ['<leader>l'] = { name = '[L]SP', _ = 'which_key_ignore' },
+      require('which-key').add {
+        { '<leader>d', group = '[D]ocument' },
+        { '<leader>f', group = '[F]ind' },
+        { '<leader>l', group = '[L]SP' },
       }
     end,
   },
