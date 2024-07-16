@@ -115,6 +115,12 @@ return {
               callback = vim.lsp.buf.clear_references,
             })
           end
+
+          if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
+            map('<leader>lh', function()
+              vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { 0 })
+            end, 'Toggle Inlay [H]ints')
+          end
         end,
       })
 

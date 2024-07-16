@@ -35,9 +35,6 @@ return {
   },
   {
     'max397574/better-escape.nvim',
-    opts = {
-      mapping = { 'jk', 'jj', 'оо' },
-    },
   },
   { 'github/copilot.vim' },
   {
