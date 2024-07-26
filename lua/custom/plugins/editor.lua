@@ -35,6 +35,7 @@ return {
   },
   {
     'max397574/better-escape.nvim',
+    opts = {},
   },
   { 'github/copilot.vim' },
   {
