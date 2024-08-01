@@ -6,6 +6,8 @@ require('lazy').setup({
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
 
+  require 'custom/plugins/colorschemes',
+
   require 'kickstart/plugins/gitsigns',
 
   require 'kickstart/plugins/which-key',
@@ -17,8 +19,6 @@ require('lazy').setup({
   require 'kickstart/plugins/conform',
 
   require 'kickstart/plugins/cmp',
-
-  require 'kickstart/plugins/tokyonight',
 
   require 'kickstart/plugins/todo-comments',
 
@@ -66,5 +66,7 @@ require('lazy').setup({
     },
   },
 })
+
+vim.cmd.colorscheme 'nord'
 
 -- vim: ts=2 sts=2 sw=2 et
