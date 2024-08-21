@@ -63,33 +63,6 @@ return {
       end, { desc = 'Resize split right' })
     end,
   },
-  -- {
-  --   'nvim-neo-tree/neo-tree.nvim',
-  --   branch = 'v3.x',
-  --   dependencies = {
-  --     'nvim-lua/plenary.nvim',
-  --     'nvim-tree/nvim-web-devicons',
-  --     'MunifTanjim/nui.nvim',
-  --   },
-  --   config = function()
-  --     require('neo-tree').setup()
-  --     vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle<cr>', { desc = 'Toggle file tree' })
-  --     vim.keymap.set('n', '<leader>o', '<cmd>Neotree focus<cr>', { desc = 'Focus file tree' })
-  --
-  --     vim.cmd [[
-  --       highlight! link NeoTreeDirectoryIcon NvimTreeFolderIcon
-  --       highlight! link NeoTreeDirectoryName NvimTreeFolderName
-  --       highlight! link NeoTreeSymbolicLinkTarget NvimTreeSymlink
-  --       highlight! link NeoTreeRootName NvimTreeRootFolder
-  --       highlight! link NeoTreeDirectoryName NvimTreeOpenedFolderName
-  --       highlight! link NeoTreeFileNameOpened NvimTreeOpenedFile
-  --     ]]
-  --   end,
-  -- },
-  {
-    'norcalli/nvim-colorizer.lua',
-    opts = {},
-  },
   {
     'nativerv/cyrillic.nvim',
     event = { 'VeryLazy' },

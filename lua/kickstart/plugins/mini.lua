@@ -34,6 +34,14 @@ return {
         },
       }
 
+      vim.api.nvim_create_autocmd('FileType', {
+        pattern = { 'c', 'cpp' },
+        callback = function()
+          -- Map `<` to `<` in insert mode for C and C++ files
+          vim.api.nvim_buf_set_keymap(0, 'i', '<', '<', { noremap = true, silent = true })
+        end,
+      })
+
       -- require('mini.base16').setup {
       --   palette = require('mini.base16').mini_palette('#1a1b26', '#c0caf5', 10),
       -- }
