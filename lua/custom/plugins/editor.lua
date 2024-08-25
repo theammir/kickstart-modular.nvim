@@ -1,23 +1,11 @@
 return {
   'tpope/vim-repeat',
+  'airblade/vim-rooter',
   {
-    'kylechui/nvim-surround',
-    version = '*', -- Use for stability; omit to use `main` branch for the latest features
-    event = 'VeryLazy',
-    opts = {
-      keymaps = {
-        insert = '<C-g>z',
-        insert_line = 'gC-ggZ',
-        normal = 'gz',
-        normal_cur = 'gZ',
-        normal_line = 'gzgz',
-        normal_cur_line = 'gZgZ',
-        visual = 'gz',
-        visual_line = 'gZ',
-        delete = 'gzd',
-        change = 'gzc',
-      },
-    },
+    'szw/vim-maximizer',
+    config = function()
+      vim.g.maximizer_set_mapping_with_bang = 1
+    end,
   },
   {
     'ggandor/leap.nvim',
@@ -32,36 +20,6 @@ return {
   {
     'max397574/better-escape.nvim',
     opts = {},
-  },
-  {
-    'mrjones2014/smart-splits.nvim',
-    config = function()
-      require('smart-splits').setup()
-      vim.keymap.set('n', '<C-h>', function()
-        require('smart-splits').move_cursor_left()
-      end, { desc = 'Move to left split' })
-      vim.keymap.set('n', '<C-j>', function()
-        require('smart-splits').move_cursor_down()
-      end, { desc = 'Move to below split' })
-      vim.keymap.set('n', '<C-k>', function()
-        require('smart-splits').move_cursor_up()
-      end, { desc = 'Move to above split' })
-      vim.keymap.set('n', '<C-l>', function()
-        require('smart-splits').move_cursor_right()
-      end, { desc = 'Move to right split' })
-      vim.keymap.set('n', '<C-Up>', function()
-        require('smart-splits').resize_up()
-      end, { desc = 'Resize split up' })
-      vim.keymap.set('n', '<C-Down>', function()
-        require('smart-splits').resize_down()
-      end, { desc = 'Resize split down' })
-      vim.keymap.set('n', '<C-Left>', function()
-        require('smart-splits').resize_left()
-      end, { desc = 'Resize split left' })
-      vim.keymap.set('n', '<C-Right>', function()
-        require('smart-splits').resize_right()
-      end, { desc = 'Resize split right' })
-    end,
   },
   {
     'nativerv/cyrillic.nvim',
@@ -92,5 +50,18 @@ return {
       vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
       vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
     end,
+  },
+  {
+    'akinsho/toggleterm.nvim',
+    opts = {
+      size = 10,
+      open_mapping = [[<F7>]],
+      shading_factor = 2,
+      direction = 'float',
+      float_opts = {
+        border = 'curved',
+        highlights = { border = 'Normal', background = 'Normal' },
+      },
+    },
   },
 }

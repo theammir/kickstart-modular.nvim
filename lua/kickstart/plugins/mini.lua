@@ -42,9 +42,7 @@ return {
         end,
       })
 
-      -- require('mini.base16').setup {
-      --   palette = require('mini.base16').mini_palette('#1a1b26', '#c0caf5', 10),
-      -- }
+      require('mini.align').setup()
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
