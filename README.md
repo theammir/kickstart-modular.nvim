@@ -1,5 +1,3 @@
-# kickstart-modular.nvim
-
 ## Introduction
 
 *This is a fork of [dam9000/kickstart-modular.nvim](https://github.com/dam9000/kickstart-modular.nvim), tweaked for my personal needs.*
@@ -27,7 +25,7 @@ Neovim's configurations are located under the following paths, depending on your
 <details><summary> Linux and Mac </summary>
 
 ```sh
-git clone https://github.com/theammir/kickstart-modular.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+git clone https://github.com/theammir/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
 
 </details>
@@ -37,13 +35,13 @@ git clone https://github.com/theammir/kickstart-modular.nvim.git "${XDG_CONFIG_H
 If you're using `cmd.exe`:
 
 ```
-git clone https://github.com/theammir/kickstart-modular.nvim.git %userprofile%\AppData\Local\nvim\
+git clone https://github.com/theammir/kickstart.nvim.git %userprofile%\AppData\Local\nvim\
 ```
 
 If you're using `powershell.exe`
 
 ```
-git clone https://github.com/theammir/kickstart-modular.nvim.git $env:USERPROFILE\AppData\Local\nvim\
+git clone https://github.com/theammir/kickstart.nvim.git $env:USERPROFILE\AppData\Local\nvim\
 ```
 
 </details>
