@@ -1,17 +1,13 @@
 return {
   {
     'mrcjkb/rustaceanvim',
-    version = '^4', -- Recommended
+    version = '^5', -- Recommended
     ft = { 'rust' },
     config = function()
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('UserLspConfig', {}),
         callback = function(args)
-          -- local client = vim.lsp.get_client_by_id(args.data.client_id)
-          -- if client.server_capabilities.inlayHintProvider then
-          --   vim.lsp.inlay_hint.enable(args.buf, true)
-          -- end
-          -- -- whatever other lsp config you want
+          vim.keymap.set('n', '<leader>le', '<cmd>RustLsp expandMacro<cr>', { desc = 'Expand Rust macro' })
         end,
       })
       vim.g.rustaceanvim = {

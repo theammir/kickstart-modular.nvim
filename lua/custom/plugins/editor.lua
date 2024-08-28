@@ -2,9 +2,14 @@ return {
   'tpope/vim-repeat',
   'airblade/vim-rooter',
   {
-    'szw/vim-maximizer',
+    'declancm/maximize.nvim',
     config = function()
-      vim.g.maximizer_set_mapping_with_bang = 1
+      local maximize = require 'maximize'
+      maximize.setup()
+
+      vim.keymap.set('n', '<F3>', function()
+        maximize.toggle()
+      end, { desc = 'Maximize split toggle' })
     end,
   },
   {
@@ -15,7 +20,7 @@ return {
       leap.create_default_mappings()
 
       leap.opts.equivalence_classes = { ' \t\r\n', '([{', ')]}', '\'"`' }
-      require('leap.user').set_repeat_keys('<enter>', '<backspace>')
+      -- require('leap.user').set_repeat_keys('<enter>', '<backspace>')
 
       vim.api.nvim_create_autocmd('ColorScheme', {
         callback = function()
