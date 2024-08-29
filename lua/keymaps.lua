@@ -1,25 +1,12 @@
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
--- Diagnostic keymaps
-vim.keymap.set('n', '<leader>lq', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
-
 vim.keymap.set('n', '<C-s>', '<cmd>:w<cr>', { desc = 'Quick-save' })
 vim.keymap.set('n', '<leader>q', '<cmd>:confirm qa<cr>', { desc = 'Quit' })
 
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-
--- vim.keymap.set('n', '<C-Up>', '<cmd>resize +2<cr>', { desc = 'Resize horizontal window up' })
--- vim.keymap.set('n', '<C-Down>', '<cmd>resize -2<cr>', { desc = 'Resize horizontal window down' })
--- vim.keymap.set('n', '<C-Left>', '<cmd>vertical resize +2<cr>', { desc = 'Resize vertical window left' })
--- vim.keymap.set('n', '<C-Right>', '<cmd>resize -2<cr>', { desc = 'Resize vertical window right' })
 
 vim.keymap.set('n', '\\', '<C-w>s', { desc = 'Horizontal split' })
 vim.keymap.set('n', '|', '<C-w>v', { desc = 'Vertical split' })
@@ -32,6 +19,9 @@ vim.keymap.set('', '<M-k>', '<cmd>m .-2<cr>==', { desc = 'Move line up' })
 vim.keymap.set('', '<M-j>', '<cmd>m .+1<cr>==', { desc = 'Move line down' })
 
 vim.keymap.set('n', '<leader>dc', '<cmd>cd %:p:h<cr>', { desc = 'Change to current directory' })
+
+vim.keymap.set('n', '<leader>ul', '<cmd>Lazy<cr>', { desc = 'Open Lazy' })
+vim.keymap.set('n', '<leader>um', '<cmd>Mason<cr>', { desc = 'Open Mason' })
 
 if vim.g.neovide then
   vim.keymap.set('n', '<C-=>', '<cmd>let g:neovide_scale_factor = g:neovide_scale_factor + 0.1<cr>', { desc = 'Increase Neovide scale factor' })

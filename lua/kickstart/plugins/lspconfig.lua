@@ -11,6 +11,37 @@ return {
       },
     },
   },
+  {
+    'folke/trouble.nvim',
+    opts = {},
+    cmd = 'Trouble',
+    keys = {
+      {
+        '<leader>td',
+        '<cmd>Trouble diagnostics toggle filter.buf=0<cr>',
+        desc = 'Toggle trouble buffer diag',
+      },
+      {
+        '<leader>tD',
+        '<cmd>Trouble diagnostics toggle<cr>',
+        desc = 'Toggle trouble diagnostics',
+      },
+      {
+        '<leader>tl',
+        '<cmd>Trouble loclist toggle<cr>',
+        'Toggle trouble loclist',
+      },
+      {
+        '<leader>tq',
+        '<cmd>Trouble qflist toggle<cr>',
+        'Toggle trouble qflist',
+      },
+      {
+        '<leader>tt',
+        '<cmd>TodoTrouble<cr>',
+      },
+    },
+  },
   { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = {
@@ -66,7 +97,7 @@ return {
           -- for LSP related items. It sets the mode, buffer and description for us each time.
           local map = function(keys, func, desc, mode)
             mode = mode or 'n'
-            vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
+            vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = desc })
           end
 
           -- Jump to the definition of the word under your cursor.
@@ -96,7 +127,8 @@ return {
 
           -- Rename the variable under your cursor.
           --  Most Language Servers support renaming across files, etc.
-          map('<leader>lr', vim.lsp.buf.rename, '[R]ename')
+          map('<leader>lr', require('renamer').rename, 'Rename LSP symbol', { 'n', 'x' })
+          map('<F2>', require('renamer').rename, 'Rename LSP symbol', 'i')
 
           -- Execute a code action, usually your cursor needs to be on top of an error
           -- or a suggestion from your LSP for this to activate.
