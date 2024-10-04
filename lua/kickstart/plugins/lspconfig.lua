@@ -19,26 +19,27 @@ return {
       {
         '<leader>td',
         '<cmd>Trouble diagnostics toggle filter.buf=0<cr>',
-        desc = 'Toggle trouble buffer diag',
+        desc = 'Toggle buffer diag',
       },
       {
         '<leader>tD',
         '<cmd>Trouble diagnostics toggle<cr>',
-        desc = 'Toggle trouble diagnostics',
+        desc = 'Toggle diagnostics',
       },
       {
         '<leader>tl',
         '<cmd>Trouble loclist toggle<cr>',
-        'Toggle trouble loclist',
+        'Toggle loclist',
       },
       {
         '<leader>tq',
         '<cmd>Trouble qflist toggle<cr>',
-        'Toggle trouble qflist',
+        'Toggle quickfix',
       },
       {
         '<leader>tt',
-        '<cmd>TodoTrouble<cr>',
+        '<cmd>TodoTrouble toggle<cr>',
+        'Toggle TODO',
       },
     },
   },

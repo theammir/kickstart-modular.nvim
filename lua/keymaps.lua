@@ -22,6 +22,7 @@ vim.keymap.set('n', '<leader>dc', '<cmd>cd %:p:h<cr>', { desc = 'Change to curre
 
 vim.keymap.set('n', '<leader>ul', '<cmd>Lazy<cr>', { desc = 'Open Lazy' })
 vim.keymap.set('n', '<leader>um', '<cmd>Mason<cr>', { desc = 'Open Mason' })
+vim.keymap.set('n', '<leader>ut', '<cmd>Themery<cr>', { desc = 'Open Themery' })
 
 if vim.g.neovide then
   vim.keymap.set('n', '<C-=>', '<cmd>let g:neovide_scale_factor = g:neovide_scale_factor + 0.1<cr>', { desc = 'Increase Neovide scale factor' })
