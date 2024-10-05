@@ -36,7 +36,15 @@ return {
   },
   {
     'max397574/better-escape.nvim',
-    opts = {},
+    event = 'InsertEnter',
+    config = function()
+      require('better_escape').setup {
+        mappings = {
+          t = { j = { false } }, -- lazygit navigation fix
+          v = { j = { false } }, -- visual select fix
+        },
+      }
+    end,
   },
   {
     'nativerv/cyrillic.nvim',
